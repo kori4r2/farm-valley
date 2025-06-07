@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace FarmValley {
@@ -6,6 +7,10 @@ namespace FarmValley {
         [SerializeField] protected Player player;
 
         public abstract void Interact();
+
+        public abstract void Select();
+
+        public abstract void Deselect();
 
         protected virtual void OnTriggerEnter2D(Collider2D other) {
             if (!player.IsPlayer(other.gameObject)) return;
@@ -16,6 +21,10 @@ namespace FarmValley {
         protected virtual void OnTriggerExit2D(Collider2D other) {
             if (!player.IsPlayer(other.gameObject)) return;
 
+            interactor.RemoveInteractable(this);
+        }
+
+        protected void OnDisable() {
             interactor.RemoveInteractable(this);
         }
     }
