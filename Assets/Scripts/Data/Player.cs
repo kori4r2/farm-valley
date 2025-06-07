@@ -6,11 +6,11 @@ namespace FarmValley {
         private PlayerController controller = null;
 
         public void SetPlayer(PlayerController newPlayer) {
-            this.controller = newPlayer;
+            controller = newPlayer;
         }
 
         public void UnsetPlayer(PlayerController removedPlayer) {
-            if (this.controller == removedPlayer) this.controller = null;
+            if (controller == removedPlayer) controller = null;
         }
 
         public bool IsPlayer(GameObject obj) {

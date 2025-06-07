@@ -17,6 +17,7 @@ namespace FarmValley {
         [SerializeField] private Player playerReference;
         [SerializeField] private BoolVariable isPaused;
         private VariableObserver<bool> pauseObserver;
+        [SerializeField] private Interactor interactor;
 
         private void Awake() {
             pauseObserver = new VariableObserver<bool>(isPaused, OnPauseChanged);
@@ -47,7 +48,8 @@ namespace FarmValley {
 
         private void OnInteract(InputAction.CallbackContext context) {
             if (!movable.CanMove || isPaused.Value) return;
-            // Interact
+
+            interactor.AttemptInteraction();
         }
 
         private void OnDisable() {
