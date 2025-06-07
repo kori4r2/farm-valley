@@ -5,6 +5,12 @@ namespace FarmValley {
     public class Player : ScriptableObject {
         private PlayerController controller = null;
 
+        public bool HasController => controller is not null && controller;
+
+        public Vector3 GetPosition() {
+            return !HasController ? Vector3.zero : controller.transform.position;
+        }
+
         public void SetPlayer(PlayerController newPlayer) {
             controller = newPlayer;
         }
@@ -14,7 +20,7 @@ namespace FarmValley {
         }
 
         public bool IsPlayer(GameObject obj) {
-            return controller is not null && controller && obj == controller.gameObject;
+            return HasController && obj == controller.gameObject;
         }
     }
 }
