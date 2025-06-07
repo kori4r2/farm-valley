@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,13 +20,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Data/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Data/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/GameTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.toblerone.toolbox@513bc695569b/Runtime/Physics/Movable2D.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -130,7 +130,7 @@
       <workItem from="1749252491652" duration="184000" />
       <workItem from="1749252959890" duration="1535000" />
       <workItem from="1749255914269" duration="4968000" />
-      <workItem from="1749304770702" duration="3456000" />
+      <workItem from="1749304770702" duration="3687000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project setup">
       <option name="closed" value="true" />
@@ -156,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749263100319</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Basic interaction logic">
+      <option name="closed" value="true" />
+      <created>1749308417544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749308417544</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Basic inventory logic">
+      <option name="closed" value="true" />
+      <created>1749308441677</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749308441677</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +202,9 @@
     <MESSAGE value="Updated project setup" />
     <MESSAGE value="Imported TextMesh Pro essential assets" />
     <MESSAGE value="Player movement and game timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player movement and game timer" />
+    <MESSAGE value="Basic interaction logic" />
+    <MESSAGE value="Basic inventory logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic inventory logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
