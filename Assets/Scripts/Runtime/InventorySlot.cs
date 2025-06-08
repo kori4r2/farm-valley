@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace FarmValley {
     [Serializable]
@@ -10,10 +11,20 @@ namespace FarmValley {
         public int Count => count;
 
         public bool IsEmpty => item is null || !item || count == 0;
+        private UnityEvent onChange = new UnityEvent();
+
+        public void ObserveChange(UnityAction callback) {
+            onChange.AddListener(callback);
+        }
+
+        public void StopObserving(UnityAction callback) {
+            onChange.RemoveListener(callback);
+        }
 
         public void RemoveItem() {
             item = null;
             count = 0;
+            onChange.Invoke();
         }
 
         public void SetItem(Item newItem, int startingCount = 1) {
@@ -22,42 +33,32 @@ namespace FarmValley {
 
             item = newItem;
             count = newItem.Stackable ? startingCount : -1;
+            onChange.Invoke();
         }
 
         public void AddStack(int add = 1) {
             if (IsEmpty || !item.Stackable) return;
 
             count += Mathf.Max(0, add);
+            onChange.Invoke();
         }
 
         public void RemoveStack(int remove = 1) {
             if (IsEmpty || !item.Stackable) return;
 
             count -= Mathf.Max(0, remove);
-            if (count <= 0) RemoveItem();
-        }
-
-        private void MoveContentTo(InventorySlot other) {
-            other.SetItem(item, count);
-            RemoveItem();
+            if (count <= 0)
+                RemoveItem();
+            else
+                onChange.Invoke();
         }
 
         public void SwapContents(InventorySlot other) {
             if (IsEmpty && other.IsEmpty) return;
 
-            if (IsEmpty && !other.IsEmpty) {
-                other.MoveContentTo(this);
-                return;
-            }
-
-            if (!IsEmpty && other.IsEmpty) {
-                MoveContentTo(other);
-                return;
-            }
-
             Item previousItem = item;
             int previousCount = count;
-            other.MoveContentTo(this);
+            SetItem(other.item, other.count);
             other.SetItem(previousItem, previousCount);
         }
     }

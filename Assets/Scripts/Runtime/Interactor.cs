@@ -13,9 +13,14 @@ namespace FarmValley {
         }
 
         public void AddInteractable(Interactable newObj) {
+            DeselectCurrentInteractable();
             RemoveInteractable(newObj);
             interactables.Add(newObj);
             SelectLastInteractable();
+        }
+
+        private void DeselectCurrentInteractable() {
+            if (interactables.Count > 0) interactables[^1].Deselect();
         }
 
         private void SelectLastInteractable() {

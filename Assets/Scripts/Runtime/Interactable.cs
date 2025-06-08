@@ -1,10 +1,10 @@
-using System;
 using UnityEngine;
 
 namespace FarmValley {
     public abstract class Interactable : MonoBehaviour {
         [SerializeField] protected Interactor interactor;
         [SerializeField] protected Player player;
+        [SerializeField] protected Collider2D trigger;
 
         public abstract void Interact();
 
