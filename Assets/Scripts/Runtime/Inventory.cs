@@ -27,6 +27,15 @@ namespace FarmValley {
             stackables.Clear();
         }
 
+        public void RecheckStackableItems() {
+            stackables.Clear();
+            for (int index = 0; index < InventorySize; index++) {
+                if (slots[index].IsEmpty || !slots[index].Item.Stackable) continue;
+
+                stackables.Add(slots[index].Item, index);
+            }
+        }
+
         public InventorySlot GetSlot(int index) {
             index = Mathf.Clamp(index, 0, InventorySize - 1);
             return slots[index];

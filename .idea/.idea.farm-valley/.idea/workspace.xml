@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="" />
+    <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/InventoryInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/InventoryInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,6 +163,8 @@
       <workItem from="1749395308443" duration="2189000" />
       <workItem from="1749398265041" duration="2783000" />
       <workItem from="1749406620199" duration="3498000" />
+      <workItem from="1749412969393" duration="410000" />
+      <workItem from="1749413770546" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project setup">
       <option name="closed" value="true" />
@@ -325,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749410102415</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Made the main scene a little more pleasant">
+      <option name="closed" value="true" />
+      <created>1749413361636</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1749413361636</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +387,8 @@
     <MESSAGE value="Added item descriptions for inventory" />
     <MESSAGE value="IDE Code Cleanup" />
     <MESSAGE value="Added Save/Load functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Save/Load functionality" />
+    <MESSAGE value="Made the main scene a little more pleasant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the main scene a little more pleasant" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -22,6 +22,7 @@ namespace FarmValley {
             foreach (InventorySlotInfo info in slotInfos) {
                 inventory.GetSlot(info.index).SetItem(itemsById[info.itemId], info.count);
             }
+            inventory.RecheckStackableItems();
         }
     }
 }
