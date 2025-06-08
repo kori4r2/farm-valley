@@ -56,10 +56,54 @@ MonoBehaviour:
     runningAnimatorKey: IsMoving
     spriteRenderer: {fileID: 6421311382077441869}
     defaultLookRight: 0
-  interactAction: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  inputs:
+  - action: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: e3a0e7d7cd3ef19e5aea6d9da933c53a, type: 2}
+          m_TargetAssemblyTypeName: FarmValley.Interactor, farm-valley
+          m_MethodName: AttemptInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: {fileID: -377065801670438350, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: b75a0519ef904f469b6305a2677f1a71, type: 2}
+          m_TargetAssemblyTypeName: Toblerone.Toolbox.EventSO, TobleroneBox
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 1c1ed8831f1b088468c3df6e4330f404, type: 2}
+          m_TargetAssemblyTypeName: Toblerone.Toolbox.GenericVariable`1[[System.Boolean,
+            mscorlib
+          m_MethodName: set_Value
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   playerReference: {fileID: 11400000, guid: bb92d96c07bd76799b098e774ff0a264, type: 2}
   isPaused: {fileID: 11400000, guid: 1c1ed8831f1b088468c3df6e4330f404, type: 2}
-  interactor: {fileID: 11400000, guid: e3a0e7d7cd3ef19e5aea6d9da933c53a, type: 2}
 --- !u!50 &8584887772303072347
 Rigidbody2D:
   serializedVersion: 5

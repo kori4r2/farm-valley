@@ -6,19 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0000.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0000.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0002.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0003.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0004.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0005.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0006.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0007.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0013.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0013.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0015.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0015.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0016.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI Pack - Pixel Adventure/Tiles/Large tiles/Thin outline/tile_0016.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,40 +23,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Art/Pixel Platformer/Tilemap/tilemap.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/InputSystem_Actions.inputactions" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/InputSystem_Actions.inputactions" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/RuntimeVariables/Inventory.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/RuntimeVariables/Inventory.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/GameTimer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/InventorySlot.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/InventorySlot.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/InventorySlot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/MoveAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.toblerone.toolbox@513bc695569b/Runtime/Physics/Movable2D.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -172,7 +134,8 @@
       <workItem from="1749314347195" duration="1441000" />
       <workItem from="1749322437401" duration="2710000" />
       <workItem from="1749325286741" duration="12275000" />
-      <workItem from="1749351109268" duration="133000" />
+      <workItem from="1749351109268" duration="570000" />
+      <workItem from="1749351700240" duration="570000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project setup">
       <option name="closed" value="true" />
@@ -278,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749349819189</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added clock view for in game time">
+      <option name="closed" value="true" />
+      <created>1749351671594</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749351671594</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +288,8 @@
     <MESSAGE value="Can now interact to gain items" />
     <MESSAGE value="Created 2 items and GiveItem prefab" />
     <MESSAGE value="Added player animation and updated scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added player animation and updated scene" />
+    <MESSAGE value="Added clock view for in game time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added clock view for in game time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

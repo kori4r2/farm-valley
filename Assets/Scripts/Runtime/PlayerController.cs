@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Toblerone.Toolbox;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,13 +15,12 @@ namespace FarmValley {
         [SerializeField] private MoveAnimator moveAnimator;
 
         [Header("Interactions")]
-        [SerializeField] private InputActionReference interactAction;
+        [SerializeField] private List<PlayerInput> inputs;
 
         [Header("References")]
         [SerializeField] private Player playerReference;
         [SerializeField] private BoolVariable isPaused;
         private VariableObserver<bool> pauseObserver;
-        [SerializeField] private Interactor interactor;
 
         private void Awake() {
             pauseObserver = new VariableObserver<bool>(isPaused, OnPauseChanged);
@@ -47,13 +47,9 @@ namespace FarmValley {
         private void AddInputCallbacks() {
             moveAction.action.performed += OnMove;
             moveAction.action.canceled += OnMove;
-            interactAction.action.performed += OnInteract;
-        }
-
-        private void OnInteract(InputAction.CallbackContext context) {
-            if (!movable.CanMove || isPaused.Value) return;
-
-            interactor.AttemptInteraction();
+            foreach (PlayerInput playerInput in inputs) {
+                playerInput.SetupCallbacks();
+            }
         }
 
         private void OnDisable() {
@@ -64,6 +60,9 @@ namespace FarmValley {
         private void RemoveInputCallbacks() {
             moveAction.action.performed -= OnMove;
             moveAction.action.canceled -= OnMove;
+            foreach (PlayerInput playerInput in inputs) {
+                playerInput.RemoveCallbacks();
+            }
         }
 
         private void OnMove(InputAction.CallbackContext context) {
