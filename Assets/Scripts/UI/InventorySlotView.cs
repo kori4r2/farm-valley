@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using Toblerone.Toolbox;
 using UnityEngine;
@@ -11,13 +10,17 @@ namespace FarmValley {
         [SerializeField] private TextMeshProUGUI itemName;
         [SerializeField] private TextMeshProUGUI stackCounter;
         [SerializeField] private StringVariable itemDescription;
-        private InventorySlot slot;
         [Header("ItemDrag")]
         [SerializeField] private InventoryDragItem dragItem;
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Color defaultTint;
         [SerializeField] private Color selectedTint;
         [SerializeField] private Color targetTint;
+        private InventorySlot slot;
+
+        private void OnDestroy() {
+            slot?.StopObserving(LoadSlotInfo);
+        }
 
         public void Init(InventorySlot inventorySlot) {
             slot = inventorySlot;
@@ -33,15 +36,9 @@ namespace FarmValley {
             backgroundImage.color = defaultTint;
             if (slot.IsEmpty) return;
 
-            if (slot.Item.Stackable) {
-                stackCounter.text = $"x{slot.Count}";
-            }
+            if (slot.Item.Stackable) stackCounter.text = $"x{slot.Count}";
             itemName.text = slot.Item.DisplayName;
             itemIcon.sprite = slot.Item.Icon;
-        }
-
-        private void OnDestroy() {
-            slot?.StopObserving(LoadSlotInfo);
         }
 
         public void OnPointerEnter() {

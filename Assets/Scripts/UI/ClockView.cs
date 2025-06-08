@@ -13,18 +13,18 @@ namespace FarmValley {
             timeObserver = new VariableObserver<float>(timeVariable, UpdateTimer);
         }
 
-        private void UpdateTimer(float newTimeSeconds) {
-            int totalSeconds = Mathf.FloorToInt(Mathf.Max(0f, newTimeSeconds));
-            int minutes = Math.DivRem(totalSeconds, 60, out int seconds);
-            textField.text = $"{minutes:00}:{seconds:00}";
-        }
-
         private void OnEnable() {
             timeObserver.StartWatching();
         }
 
         private void OnDisable() {
             timeObserver.StopWatching();
+        }
+
+        private void UpdateTimer(float newTimeSeconds) {
+            int totalSeconds = Mathf.FloorToInt(Mathf.Max(0f, newTimeSeconds));
+            int minutes = Math.DivRem(totalSeconds, 60, out int seconds);
+            textField.text = $"{minutes:00}:{seconds:00}";
         }
     }
 }

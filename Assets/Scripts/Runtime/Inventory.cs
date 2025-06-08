@@ -6,16 +6,11 @@ namespace FarmValley {
     public class Inventory : ScriptableObject {
         public const int InventorySize = 20;
         private readonly InventorySlot[] slots = new InventorySlot[InventorySize];
-        private readonly Dictionary<Item, int> stackables = new Dictionary<Item, int>();
-        private int firstFreeSlot = 0;
+        private readonly Dictionary<Item, int> stackables = new();
+        private int firstFreeSlot;
         private int freeSlots = InventorySize;
 
         private bool IsFull => firstFreeSlot >= InventorySize;
-
-        public InventorySlot GetSlot(int index) {
-            index = Mathf.Clamp(index, 0, InventorySize - 1);
-            return slots[index];
-        }
 
         private void Reset() {
             OnEnable();
@@ -32,32 +27,32 @@ namespace FarmValley {
             stackables.Clear();
         }
 
+        public InventorySlot GetSlot(int index) {
+            index = Mathf.Clamp(index, 0, InventorySize - 1);
+            return slots[index];
+        }
+
         private void UpdateFirstFreeSlot(int changeIndex) {
-            if (slots[changeIndex].IsEmpty && changeIndex < firstFreeSlot) {
+            if (slots[changeIndex].IsEmpty && changeIndex < firstFreeSlot)
                 firstFreeSlot = changeIndex;
-            } else if (changeIndex == firstFreeSlot && !slots[changeIndex].IsEmpty) {
-                FindNextFreeSlot();
-            }
+            else if (changeIndex == firstFreeSlot && !slots[changeIndex].IsEmpty) FindNextFreeSlot();
         }
 
         public bool AddItem(Item item, int count = 1) {
-            if (IsFull && (!item.Stackable || !stackables.ContainsKey(item))) {
-                return false;
-            }
-            if (!item.Stackable && count > freeSlots) {
-                return false;
-            }
+            if (IsFull && (!item.Stackable || !stackables.ContainsKey(item))) return false;
+
+            if (!item.Stackable && count > freeSlots) return false;
 
             count = Mathf.Max(1, count);
-            if (item.Stackable && stackables.TryGetValue(item, out int index)) {
+            if (item.Stackable && stackables.TryGetValue(item, out int index))
                 slots[index].AddStack(count);
-            } else if (item.Stackable) {
+            else if (item.Stackable) {
                 stackables[item] = firstFreeSlot;
                 slots[firstFreeSlot].SetItem(item, count);
                 freeSlots--;
             } else {
                 for (int i = 0; i < count; i++) {
-                    slots[firstFreeSlot].SetItem(item, 1);
+                    slots[firstFreeSlot].SetItem(item);
                 }
                 freeSlots -= count;
             }
@@ -78,9 +73,8 @@ namespace FarmValley {
                 if (slots[index].Count < count) return false;
 
                 slots[index].RemoveStack(count);
-            } else {
+            } else
                 slots[index].RemoveItem();
-            }
             return true;
         }
 
@@ -90,6 +84,7 @@ namespace FarmValley {
             for (int index = 0; index < InventorySize; index++) {
                 if (slots[index].Item == item) return index;
             }
+
             return -1;
         }
     }

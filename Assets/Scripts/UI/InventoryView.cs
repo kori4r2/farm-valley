@@ -10,20 +10,8 @@ namespace FarmValley {
         [SerializeField] private EventListener activationListener;
         [SerializeField] private List<PlayerInput> deactivationInputs;
 
-        public void Show() {
-            gameObject.SetActive(true);
-        }
-
-        public void Hide() {
-            gameObject.SetActive(false);
-        }
-
         private void Awake() {
             activationListener.StartListeningEvent();
-        }
-
-        private void OnDestroy() {
-            activationListener.StopListeningEvent();
         }
 
         private void Start() {
@@ -36,11 +24,6 @@ namespace FarmValley {
             Hide();
         }
 
-        private void CreateNewSlot(int index) {
-            InventorySlotView newView = Instantiate(slotViewPrefab, slotsParent);
-            newView.Init(inventory.GetSlot(index));
-        }
-
         private void OnEnable() {
             foreach (PlayerInput deactivationInput in deactivationInputs) {
                 deactivationInput.SetupCallbacks();
@@ -51,6 +34,23 @@ namespace FarmValley {
             foreach (PlayerInput deactivationInput in deactivationInputs) {
                 deactivationInput.RemoveCallbacks();
             }
+        }
+
+        private void OnDestroy() {
+            activationListener.StopListeningEvent();
+        }
+
+        public void Show() {
+            gameObject.SetActive(true);
+        }
+
+        public void Hide() {
+            gameObject.SetActive(false);
+        }
+
+        private void CreateNewSlot(int index) {
+            InventorySlotView newView = Instantiate(slotViewPrefab, slotsParent);
+            newView.Init(inventory.GetSlot(index));
         }
     }
 }

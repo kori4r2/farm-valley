@@ -5,9 +5,11 @@ using UnityEngine.Events;
 namespace FarmValley {
     [CreateAssetMenu(menuName = "FarmValley/UI/InventoryDragItem")]
     public class InventoryDragItem : ScriptableObject {
-        private InventorySlot draggedSlot = null;
-        private InventorySlot targetSlot = null;
-        private readonly UnityEvent<Item> draggedItemChanged = new UnityEvent<Item>();
+        private readonly UnityEvent<Item> draggedItemChanged = new();
+        private InventorySlot draggedSlot;
+        private InventorySlot targetSlot;
+
+        public bool IsDraggingSomething => draggedSlot != null;
 
         public void Reset() {
             draggedSlot = null;
@@ -22,8 +24,6 @@ namespace FarmValley {
         public void StopObservingDragChanges(UnityAction<Item> callback) {
             draggedItemChanged.RemoveListener(callback);
         }
-
-        public bool IsDraggingSomething => draggedSlot != null;
 
         public bool IsBeingDragged(InventorySlot slot) {
             return draggedSlot != null && draggedSlot == slot;
@@ -64,7 +64,7 @@ namespace FarmValley {
         }
 
         private void ShowNewTargetDescription(StringVariable description) {
-            description.Value = (targetSlot != null && !targetSlot.IsEmpty) ?
+            description.Value = targetSlot != null && !targetSlot.IsEmpty ?
                 targetSlot.Item.Description :
                 string.Empty;
         }

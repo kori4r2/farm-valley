@@ -4,7 +4,7 @@ using UnityEngine;
 namespace FarmValley {
     [CreateAssetMenu(menuName = "FarmValley/Interactor")]
     public class Interactor : ScriptableObject {
-        private readonly List<Interactable> interactables = new List<Interactable>();
+        private readonly List<Interactable> interactables = new();
 
         public void AttemptInteraction() {
             if (interactables.Count < 1) return;

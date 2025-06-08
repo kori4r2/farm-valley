@@ -6,12 +6,12 @@ namespace FarmValley {
         [SerializeField] private GameObject selectionIndicator;
         [SerializeField] private Inventory inventory;
         [SerializeField] private Item item;
-        [SerializeField, Range(1, 999)] private int count = 1;
-        [SerializeField, Tooltip("Seconds"), Range(0, 1440)]
-        private float cooldown = 0;
-        private float activationTime;
+        [SerializeField] [Range(1, 999)] private int count = 1;
+        [SerializeField] [Tooltip("Seconds")] [Range(0, 1440)]
+        private float cooldown;
         [SerializeField] private FloatVariable gameTime;
         private VariableObserver<float> timerObserver;
+        private float activationTime;
 
         private void Awake() {
             timerObserver = new VariableObserver<float>(gameTime, OnTimerChanged);

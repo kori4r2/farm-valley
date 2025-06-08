@@ -6,13 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e077aeae-3ab2-47e1-9d1a-865ef54aaf98" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.farm-valley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Database/Apple.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Database/Apple.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Database/Plank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Database/Plank.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ItemSlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ItemSlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/InteractCollectItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/InteractCollectItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/InventorySlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/MoveAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/MoveAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ClockView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ClockView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItemView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventorySlotView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventorySlotView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,20 +36,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Database/Apple.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Database/Plank.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Data/Item.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Data/Item.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Data/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/GameTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/GameTimer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/InteractCollectItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Interactor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/Inventory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/InventorySlot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/MoveAnimator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/MoveAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/MoveAnimator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/Runtime/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/ClockView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/InventoryDragItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/InventoryDragItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/InventoryDragItemView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/InventoryDragItemView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/InventorySlotView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/InventorySlotView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/Scripts/UI/InventoryView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/italo/Projects/farm-valley/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.toblerone.toolbox@513bc695569b/Runtime/Physics/Movable2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.toblerone.toolbox@513bc695569b/Runtime/UI/InputMapSwitcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@540dd21c6cd7/Runtime/Common/IVirtualTexturingEnabledRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
@@ -158,7 +185,7 @@
       <workItem from="1749394015686" duration="158000" />
       <workItem from="1749394357331" duration="533000" />
       <workItem from="1749395308443" duration="2189000" />
-      <workItem from="1749398265041" duration="1874000" />
+      <workItem from="1749398265041" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="Updated project setup">
       <option name="closed" value="true" />
@@ -304,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749397660234</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added item descriptions for inventory">
+      <option name="closed" value="true" />
+      <created>1749405644445</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1749405644445</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +381,8 @@
     <MESSAGE value="Added clock view for in game time" />
     <MESSAGE value="Serialized player input callbacks" />
     <MESSAGE value="Finished advanced inventory functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished advanced inventory functionality" />
+    <MESSAGE value="Added item descriptions for inventory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added item descriptions for inventory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -15,6 +14,14 @@ namespace FarmValley {
             dragIcon.gameObject.SetActive(false);
         }
 
+        private void OnEnable() {
+            pointerMove.action.performed += OnPointerMove;
+        }
+
+        private void OnDisable() {
+            pointerMove.action.performed -= OnPointerMove;
+        }
+
         private void OnDestroy() {
             reference.StopObservingDragChanges(OnItemDraggedChanged);
         }
@@ -29,16 +36,8 @@ namespace FarmValley {
             dragIcon.sprite = item.Icon;
         }
 
-        private void OnEnable() {
-            pointerMove.action.performed += OnPointerMove;
-        }
-
-        private void OnDisable() {
-            pointerMove.action.performed -= OnPointerMove;
-        }
-
         private void OnPointerMove(InputAction.CallbackContext context) {
-            Vector2 screenSize = new Vector2(Screen.width, Screen.height);
+            Vector2 screenSize = new(Screen.width, Screen.height);
             Vector2 screenPosition = ClampVector2(context.ReadValue<Vector2>(), Vector2.zero, screenSize);
             dragIcon.transform.position = new Vector3(screenPosition.x, screenPosition.y, transform.position.z);
         }

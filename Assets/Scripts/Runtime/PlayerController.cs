@@ -9,7 +9,6 @@ namespace FarmValley {
         [SerializeField] private InputActionReference moveAction;
         [SerializeField] private float moveSpeed;
         [SerializeField] private Movable2D movable;
-        private Vector2 moveInput = Vector2.zero;
 
         [Header("Animation")]
         [SerializeField] private MoveAnimator moveAnimator;
@@ -22,12 +21,38 @@ namespace FarmValley {
         [SerializeField] private Player playerReference;
         [SerializeField] private BoolVariable isPaused;
         private VariableObserver<bool> pauseObserver;
+        private Vector2 moveInput = Vector2.zero;
 
         private void Awake() {
             pauseObserver = new VariableObserver<bool>(isPaused, OnPauseChanged);
             playerReference.SetPlayer(this);
             moveAnimator.Init();
             inputInitializer.Enable();
+        }
+
+        private void Update() {
+            if (isPaused.Value) return;
+
+            movable.SetVelocity(moveSpeed * moveInput);
+            moveAnimator.Update(movable.CurrentVelocity);
+        }
+
+        private void FixedUpdate() {
+            movable.UpdateMovable();
+        }
+
+        private void OnEnable() {
+            AddInputCallbacks();
+            pauseObserver.StartWatching();
+        }
+
+        private void OnDisable() {
+            RemoveInputCallbacks();
+            pauseObserver.StopWatching();
+        }
+
+        private void OnDestroy() {
+            playerReference.UnsetPlayer(this);
         }
 
         private void OnPauseChanged(bool paused) {
@@ -37,26 +62,12 @@ namespace FarmValley {
                 movable.AllowDynamicMovement();
         }
 
-        private void OnDestroy() {
-            playerReference.UnsetPlayer(this);
-        }
-
-        private void OnEnable() {
-            AddInputCallbacks();
-            pauseObserver.StartWatching();
-        }
-
         private void AddInputCallbacks() {
             moveAction.action.performed += OnMove;
             moveAction.action.canceled += OnMove;
             foreach (PlayerInput playerInput in inputs) {
                 playerInput.SetupCallbacks();
             }
-        }
-
-        private void OnDisable() {
-            RemoveInputCallbacks();
-            pauseObserver.StopWatching();
         }
 
         private void RemoveInputCallbacks() {
@@ -69,17 +80,6 @@ namespace FarmValley {
 
         private void OnMove(InputAction.CallbackContext context) {
             moveInput = context.ReadValue<Vector2>();
-        }
-
-        private void Update() {
-            if (isPaused.Value) return;
-
-            movable.SetVelocity(moveSpeed * moveInput);
-            moveAnimator.Update(movable.CurrentVelocity);
-        }
-
-        private void FixedUpdate() {
-            movable.UpdateMovable();
         }
     }
 }

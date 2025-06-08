@@ -3,7 +3,7 @@ using UnityEngine;
 namespace FarmValley {
     [CreateAssetMenu(menuName = "FarmValley/Player")]
     public class Player : ScriptableObject {
-        private PlayerController controller = null;
+        private PlayerController controller;
 
         public bool HasController => controller is not null && controller;
 

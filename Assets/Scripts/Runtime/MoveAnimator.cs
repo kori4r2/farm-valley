@@ -6,9 +6,9 @@ namespace FarmValley {
     public class MoveAnimator {
         [SerializeField] private Animator animator;
         [SerializeField] private string runningAnimatorKey;
-        private int runningAnimatorKeyId;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private bool defaultLookRight;
+        private int runningAnimatorKeyId;
 
         public void Init() {
             runningAnimatorKeyId = Animator.StringToHash(runningAnimatorKey);

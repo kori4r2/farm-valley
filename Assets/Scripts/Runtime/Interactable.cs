@@ -6,11 +6,9 @@ namespace FarmValley {
         [SerializeField] protected Player player;
         [SerializeField] protected Collider2D trigger;
 
-        public abstract void Interact();
-
-        public abstract void Select();
-
-        public abstract void Deselect();
+        protected void OnDisable() {
+            interactor.RemoveInteractable(this);
+        }
 
         protected virtual void OnTriggerEnter2D(Collider2D other) {
             if (!player.IsPlayer(other.gameObject)) return;
@@ -24,8 +22,10 @@ namespace FarmValley {
             interactor.RemoveInteractable(this);
         }
 
-        protected void OnDisable() {
-            interactor.RemoveInteractable(this);
-        }
+        public abstract void Interact();
+
+        public abstract void Select();
+
+        public abstract void Deselect();
     }
 }

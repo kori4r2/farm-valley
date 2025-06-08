@@ -5,13 +5,13 @@ using UnityEngine.Events;
 namespace FarmValley {
     [Serializable]
     public class InventorySlot {
-        [SerializeField] private Item item = null;
+        [SerializeField] private Item item;
+        [SerializeField] private int count;
+        private UnityEvent onChange = new();
         public Item Item => item;
-        [SerializeField] private int count = 0;
         public int Count => count;
 
         public bool IsEmpty => item is null || !item || count == 0;
-        private UnityEvent onChange = new UnityEvent();
 
         public void ObserveChange(UnityAction callback) {
             onChange.AddListener(callback);
