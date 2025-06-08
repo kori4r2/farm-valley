@@ -519,6 +519,7 @@ MonoBehaviour:
   selectionBorder: {fileID: 1300313899506778683}
   itemName: {fileID: 2299551500784638813}
   stackCounter: {fileID: 7931485461139953510}
+  itemDescription: {fileID: 11400000, guid: 96638a8bec1e45217addd547e1ba681f, type: 2}
   dragItem: {fileID: 11400000, guid: 9b7afc4fe2bb548ccb38d1c9e429772c, type: 2}
   backgroundImage: {fileID: 4392296813642302407}
   defaultTint: {r: 1, g: 1, b: 1, a: 1}

@@ -1,5 +1,4 @@
-using System;
-using JetBrains.Annotations;
+using Toblerone.Toolbox;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -44,19 +43,30 @@ namespace FarmValley {
             targetSlot = slot;
         }
 
-        public void FinishDrag() {
+        public void FinishDrag(StringVariable description) {
             draggedItemChanged.Invoke(null);
-            if (draggedSlot == null || targetSlot == null) return;
+            if (draggedSlot == null || targetSlot == null) {
+                ShowNewTargetDescription(description);
+                return;
+            }
 
             if (targetSlot == draggedSlot) {
+                ShowNewTargetDescription(description);
                 draggedSlot = null;
                 targetSlot = null;
                 return;
             }
 
             targetSlot.SwapContents(draggedSlot);
+            ShowNewTargetDescription(description);
             draggedSlot = null;
             targetSlot = null;
+        }
+
+        private void ShowNewTargetDescription(StringVariable description) {
+            description.Value = (targetSlot != null && !targetSlot.IsEmpty) ?
+                targetSlot.Item.Description :
+                string.Empty;
         }
     }
 }

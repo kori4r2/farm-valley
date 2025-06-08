@@ -15,3 +15,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 962ab656f2cce47f3ad7bd55cec69cf5, type: 3}
   displayName: Plank
   stackable: 0
+  description: Use planks to build some stuff. But we can't do that yet, so I guess
+    you can train karate?

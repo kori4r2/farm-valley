@@ -9,5 +9,7 @@ namespace FarmValley {
         public string DisplayName => displayName;
         [SerializeField] private bool stackable;
         public bool Stackable => stackable;
+        [SerializeField, TextArea] private string description;
+        public string Description => description;
     }
 }

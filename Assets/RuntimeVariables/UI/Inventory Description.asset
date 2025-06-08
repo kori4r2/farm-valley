@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa1602cfec6a951eb60a4aaa8322c97, type: 3}
-  m_Name: Apple
+  m_Script: {fileID: 11500000, guid: 015c62ec3d458aa479fefccdf1eecc45, type: 3}
+  m_Name: Inventory Description
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: e029583be1338ad79a5bf79d5cef4f26, type: 3}
-  displayName: Apple
-  stackable: 1
-  description: Apples can stack in your inventory and taste really good.
+  value: 

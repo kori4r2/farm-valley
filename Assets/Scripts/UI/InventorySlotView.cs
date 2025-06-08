@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Toblerone.Toolbox;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +10,7 @@ namespace FarmValley {
         [SerializeField] private Image selectionBorder;
         [SerializeField] private TextMeshProUGUI itemName;
         [SerializeField] private TextMeshProUGUI stackCounter;
+        [SerializeField] private StringVariable itemDescription;
         private InventorySlot slot;
         [Header("ItemDrag")]
         [SerializeField] private InventoryDragItem dragItem;
@@ -43,7 +46,10 @@ namespace FarmValley {
 
         public void OnPointerEnter() {
             selectionBorder.gameObject.SetActive(true);
-            if (!dragItem.IsDraggingSomething) return;
+            if (!dragItem.IsDraggingSomething) {
+                itemDescription.Value = slot.IsEmpty ? string.Empty : slot.Item.Description;
+                return;
+            }
 
             dragItem.SetTarget(slot);
             backgroundImage.color = targetTint;
@@ -51,7 +57,10 @@ namespace FarmValley {
 
         public void OnPointerExit() {
             selectionBorder.gameObject.SetActive(false);
-            if (!dragItem.IsDraggingSomething) return;
+            if (!dragItem.IsDraggingSomething) {
+                itemDescription.Value = string.Empty;
+                return;
+            }
 
             dragItem.RemoveIfTarget(slot);
             backgroundImage.color = dragItem.IsBeingDragged(slot) ? selectedTint : defaultTint;
@@ -62,10 +71,12 @@ namespace FarmValley {
 
             dragItem.BeginDrag(slot);
             backgroundImage.color = selectedTint;
+            itemDescription.Value = slot.Item.Description;
         }
 
         public void OnPointerUp() {
-            dragItem.FinishDrag();
+            itemDescription.Value = string.Empty;
+            dragItem.FinishDrag(itemDescription);
             backgroundImage.color = defaultTint;
         }
     }
