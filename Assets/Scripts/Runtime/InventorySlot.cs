@@ -28,7 +28,10 @@ namespace FarmValley {
         }
 
         public void SetItem(Item newItem, int startingCount = 1) {
-            if (newItem is null || !newItem || startingCount == 0) return;
+            if (newItem is null || !newItem || startingCount == 0) {
+                RemoveItem();
+                return;
+            }
             if (newItem.Stackable && startingCount <= 0) return;
 
             item = newItem;
@@ -54,8 +57,6 @@ namespace FarmValley {
         }
 
         public void SwapContents(InventorySlot other) {
-            if (IsEmpty && other.IsEmpty) return;
-
             Item previousItem = item;
             int previousCount = count;
             SetItem(other.item, other.count);

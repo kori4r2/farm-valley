@@ -15,6 +15,7 @@ namespace FarmValley {
         [SerializeField] private MoveAnimator moveAnimator;
 
         [Header("Interactions")]
+        [SerializeField] private InputInitializer inputInitializer;
         [SerializeField] private List<PlayerInput> inputs;
 
         [Header("References")]
@@ -26,6 +27,7 @@ namespace FarmValley {
             pauseObserver = new VariableObserver<bool>(isPaused, OnPauseChanged);
             playerReference.SetPlayer(this);
             moveAnimator.Init();
+            inputInitializer.Enable();
         }
 
         private void OnPauseChanged(bool paused) {
