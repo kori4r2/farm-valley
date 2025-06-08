@@ -5,6 +5,7 @@ using UnityEngine;
 namespace FarmValley {
     public class InventoryView : MonoBehaviour {
         [SerializeField] private Inventory inventory;
+        [SerializeField] private SaveLoader saveLoader;
         [SerializeField] private InventorySlotView slotViewPrefab;
         [SerializeField] private Transform slotsParent;
         [SerializeField] private EventListener activationListener;
@@ -15,6 +16,7 @@ namespace FarmValley {
         }
 
         private void Start() {
+            saveLoader.Load();
             foreach (Transform child in slotsParent) {
                 Destroy(child.gameObject);
             }

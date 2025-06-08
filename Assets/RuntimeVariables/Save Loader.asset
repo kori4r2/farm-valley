@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b654a524691e74721ba4ff3e74dd14d9, type: 3}
+  m_Name: Save Loader
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: d69ca34e2ffa028a49283b18231b44b8, type: 2}
+  itemList:
+  - {fileID: 11400000, guid: e0dae89a916ec7ec99dd5420f03de6a9, type: 2}
+  - {fileID: 11400000, guid: 529c929a9b6ddfd568e02a92d8fbc3cd, type: 2}

@@ -12,7 +12,7 @@ namespace FarmValley {
 
         private bool IsFull => firstFreeSlot >= InventorySize;
 
-        private void Reset() {
+        public void Reset() {
             OnEnable();
         }
 

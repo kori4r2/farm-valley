@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa1602cfec6a951eb60a4aaa8322c97, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
+  id: item_apple
   icon: {fileID: 21300000, guid: e029583be1338ad79a5bf79d5cef4f26, type: 3}
   displayName: Apple
   stackable: 1
