@@ -10,6 +10,9 @@ namespace FarmValley {
         [SerializeField] private Movable2D movable;
         private Vector2 moveInput = Vector2.zero;
 
+        [Header("Animation")]
+        [SerializeField] private MoveAnimator moveAnimator;
+
         [Header("Interactions")]
         [SerializeField] private InputActionReference interactAction;
 
@@ -22,6 +25,7 @@ namespace FarmValley {
         private void Awake() {
             pauseObserver = new VariableObserver<bool>(isPaused, OnPauseChanged);
             playerReference.SetPlayer(this);
+            moveAnimator.Init();
         }
 
         private void OnPauseChanged(bool paused) {
@@ -70,6 +74,7 @@ namespace FarmValley {
             if (isPaused.Value) return;
 
             movable.SetVelocity(moveSpeed * moveInput);
+            moveAnimator.Update(movable.CurrentVelocity);
         }
 
         private void FixedUpdate() {
